@@ -6,7 +6,7 @@ What unique ideas do YOU see the need for in your life today?
 
 Build an app that solves a problem or improves your life or the lives of those around you.
 
-### App Ideas
+### App Ideas - Meghan chose "A directory for community resources", defining "community" as metro Memphis
 
 * An app for the top businesses/individuals in a certain category
 
@@ -65,8 +65,8 @@ Create a React App for the frontend of your app. It should have the following:
 
 ###############################################
 
-# Project Title: 
+# Project Title: Digital Delta - Algo-rhythms
 
-# Purpose: 
+# Purpose: Provide educational resources for adult Memphians related to Coding & Tech Careers (Provide a more easily accessible online resource to supplement the Memphis Libary 211 resource, related to the City Hackathon's 2nd topic.)
 
-# Team Members: 
+# Team Members: Meghan Carr

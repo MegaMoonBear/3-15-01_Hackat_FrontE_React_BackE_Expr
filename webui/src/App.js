@@ -1,6 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
+import bannerImage from './assets/DigitalDelta_Banner2of3GIS_ComicNin.png';
 
 function App() {
     const [serverResponse, setServerResponse] = useState('')
@@ -38,6 +39,10 @@ function App() {
     }
   return (
     <div className="App">
+      <img src={bannerImage} alt="Digital Delta Banner" className="banner" />
+      <h1>Digital Delta - Adult Education Resources</h1>
+      <h3>Digital Delta - Blues & Binary</h3>
+      
       {serverResponse}
       <button onClick={callGet}>GET</button>
       <button onClick={callPost}>POST</button>

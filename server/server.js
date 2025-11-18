@@ -1,19 +1,26 @@
-const express = require('express');
-const cors = require('cors');
-// const dotenv = require('dotenv');
-// dotenv.config();
-require('dotenv').config();
+// Import required libraries
+const express = require('express'); // Web framework for Node.js
+const cors = require('cors'); // Enable Cross-Origin Resource Sharing
+require('dotenv').config(); // Load environment variables from .env file
 
+// Initialize Express app
 const app = express();
 
-app.use(cors());
+// Middleware
+app.use(cors()); // Allow requests from different origins (frontend)
+app.use(express.json()); // Parse JSON request bodies
 
+// In-memory data storage (replace with database in production)
 let langs = [];
 
+// ========== API ROUTES ==========
+
+// GET route - Retrieve all languages
 app.get('/', (req, res) => {
     res.send('Hello User\n' + 'there are ' + langs.length + ' langs\n' + langs[0]);
 });
 
+// POST route - Add a new language
 app.post('/', (req, res) => {
     if (req.query.lang) {
         langs.push(req.query.lang);
@@ -21,6 +28,7 @@ app.post('/', (req, res) => {
     res.send(langs);
 });
 
+// PUT route - Update an existing language
 app.put('/', (req, res) => {
     if (req.query.index && req.query.lang) {
         langs[req.query.index] = req.query.lang;
@@ -28,11 +36,10 @@ app.put('/', (req, res) => {
     } else {
         res.send('No Update was made');
     }
-    //localhost:3001/?lang=c++&index=0
-    
+    // Example: localhost:3001/?lang=c++&index=0
 });
 
-//API stands for ????
+// DELETE route - Remove a language
 app.delete('/', (req, res) => {
     if (req.query.index) {
         langs[req.query.index] = undefined;
@@ -42,6 +49,11 @@ app.delete('/', (req, res) => {
     }
 });
 
-app.listen(3001, ()=>{
-    console.log('http://localhost:3001')
-})
+// ========== SERVER STARTUP ==========
+
+// Use PORT from .env file, fallback to 3001
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});

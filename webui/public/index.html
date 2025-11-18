@@ -1,43 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Character encoding -->
     <meta charset="utf-8" />
+    <!-- Favicon - tab icon -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#000080" />
+    <!-- SEO description -->
+    <meta name="description" content="Digital Delta - Memphis Adult Education Resources for Coding & Tech Careers" />
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> <!-- Resize Dig-Delta logo to 192x192 pixels --> 
+    <!-- Web app manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Digital Delta - Memphis Tech Resources</title>
   </head>
   <body>
+    <!-- Fallback for browsers with JavaScript disabled -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- React root mount point -->
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <p>Welcome to Digital Delta, where Memphis adults can build real tech skills, open new career doors, and create long-term opportunities for themselves and their families. Whether you’re starting fresh, leveling up, or looking for a better-paying path, this guide connects you to local and online programs that make learning to code doable and supportive. Our city’s talent is strong, and with the right training, anyone can step confidently into high-growth jobs in technology. Find your new rhythm with us.</p>
+    <p>An algorithm is a clear, step-by-step set of instructions used to solve a problem or reach a goal. In the same way, building a new career path means creating your own sequence of small, steady steps that guide you forward. Each step becomes part of your "new rhythm," helping you grow skills and move confidently toward the future you want.</p>
+    <img src="webui/src/assets/DigitalDelta_Algo-RhythmBanner2of3.png" alt="Digital Delta Logo - Algorithm or Algo-Rhythm" width="200" />
+    <p>Funders and partners can join us in expanding access, strengthening our workforce, and helping more people in the Memphis community build generational wealth through digital skills.</p>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<title>Digital Delta — Memphis Coding Resources</title>
+
+--> 
+<style>
+  :root{
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --accent:#0b3a66;    /* Grizzlies blue-ish */
+    --accent-2:#7dd3fc;  /* lighter blue */
+    --gold:#ffd24a;      /* Grizzlies yellow highlight */
+    --muted:#64748b;
+    --radius:12px;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  body{ margin:0; background:linear-gradient(180deg,#f3f6fb 0%,var(--bg) 100%); color:#052235;}
+  header{ background:linear-gradient(90deg,var(--accent) 0%, #083a59 40%, #05324a 100%); color:white; padding:36px 20px; display:flex; gap:20px; align-items:center;}
+  .brand{ display:flex; gap:12px; align-items:center;}
+  .logo{
+    width:72px; height:72px; border-radius:14px; background:linear-gradient(135deg,var(--accent-2),var(--accent));
+    display:flex; align-items:center; justify-content:center; font-weight:800; color:white;
+    box-shadow:0 6px 18px rgba(5,10,25,0.25);
+  }
+  h1{ font-size:28px; margin:0; letter-spacing:0.4px;}
+  header p{ margin:0; opacity:0.95;}
+  main{ padding:28px; max-width:1200px; margin:0 auto; }
+  .grid{ display:grid; grid-template-columns: 1fr 360px; gap:20px; align-items:start;}
+  .card{ background:var(--card); border-radius:var(--radius); padding:18px; box-shadow:0 6px 18px rgba(12,24,40,0.06);}
+  h2{ margin-top:0; color:var(--accent); }
+  ul.usp{ padding-left:18px; color:var(--muted); }
+  ul.usp li{ margin:10px 0; line-height:1.35; }
+  .cta-row{ display:flex; gap:12px; margin-top:12px; flex-wrap:wrap;}
+  button{ background:var(--accent); color:white; border:0; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:600;}
+  button.secondary{ background:transparent; color:var(--accent); border:2px solid rgba(5,10,25,0.06);}
+  .small{ font-size:13px; color:var(--muted); }
+  /* Table */
+  .table-wrap{ overflow:auto; margin-top:12px; }
+  table{ width:100%; border-collapse:collapse; font-size:13px; }
+  th,td{ padding:10px 8px; text-align:left; border-bottom:1px solid #eef2f6; }
+  th{ background:linear-gradient(180deg,#fbfdff,#f4f8fc); color:var(--accent); position:sticky; top:0; }
+  .badge{ display:inline-block; padding:4px 8px; border-radius:8px; font-weight:700; font-size:12px;}
+  .free{ background:#e6fffb; color:#0a6b63; border:1px solid rgba(10,107,99,0.06);}
+  .paid{ background:#fff6db; color:#6b4a00; border:1px solid rgba(107,74,0,0.06);}
+  /* Path builder */
+  .questions label{ display:block; margin:10px 0 6px; font-weight:600; font-size:14px;}
+  .questions select, .questions input[type="text"]{ width:100%; padding:8px 10px; border-radius:8px; border:1px solid #dfe7ee; }
+  .result{ margin-top:12px; padding:12px; border-radius:8px; background:linear-gradient(90deg,#f8fbff,#ffffff); border:1px solid #eef4fb; }
+  form.org-form label{ display:block; margin-top:10px; font-weight:600; }
+  form.org-form input, form.org-form textarea, form.org-form select{ width:100%; padding:8px 10px; border-radius:8px; border:1px solid #dfe7ee; }
+  .muted-small{ color:var(--muted); font-size:13px; }
+  footer{ padding:30px 20px; text-align:center; color:var(--muted); font-size:14px; }
+  nav.links{ display:flex; gap:12px; justify-content:flex-end; margin-left:auto; }
+  @media (max-width:900px){
+    .grid{ grid-template-columns: 1fr; }
+    nav.links{ display:none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo" aria-hidden="true">DD</div>
+    <div>
+      <h1>Digital Delta</h1>
+      <p class="small">Home of the <strong>Mid-South Coders</strong> — Memphis adult coding resources</p>
+    </div>
+  </div>
+  <nav class="links" aria-label="Top links">
+    <a href="#resources" style="color:white; text-decoration:none; align-self:center;">Resources</a>
+    <a href="#path" style="color:white; text-decoration:none; align-self:center;">1-Month Path</a>
+    <a href="#submit" style="color:white; text-decoration:none; align-self:center;">Submit a Program</a>
+  </nav>
+</header>
+
+<main>
+  <div class="grid">
+    <section class="card" aria-labelledby="students-title">
+      <h2 id="students-title">Why this hub — for prospective students</h2>
+      <ul class="usp" aria-hidden="false">
+        <li><strong>One-stop clarity:</strong> Find Memphis-area and remote adult learning options in one place so you can compare without overwhelm.</li>
+        <li><strong>Apples-to-apples comparisons:</strong> Programs are shown with the same variables (cost, format, duration, credential) to help quick decisions.</li>
+        <li><strong>Career-ready pathways:</strong> See which programs lead to specific roles (IT support, data analytics, web dev) and what portfolio work employers want.</li>
+        <li><strong>Equity-first filters:</strong> Easily show free or subsidized options, childcare notes, and accessibility details.</li>
+        <li><strong>Local-first:</strong> We highlight Memphis groups (CodeCrew, Tech901, libraries) that already connect learners to employers.</li>
+      </ul>
+
+      <div class="cta-row">
+        <button onclick="document.getElementById('path').scrollIntoView({behavior:'smooth'})">Build My 1-Month Path</button>
+        <button class="secondary" onclick="document.getElementById('table').scrollIntoView({behavior:'smooth'})">Browse Programs</button>
+      </div>
+    </section>
+
+    <aside class="card" aria-labelledby="funders-title">
+      <h2 id="funders-title">Why this matters — for funders & earners</h2>
+      <ul class="usp">
+        <li><strong>Direct economic impact:</strong> Targeted programs move adults into higher-paying, stable tech jobs that build household wealth.</li>
+        <li><strong>Scalable outcomes:</strong> Support for devices, connectivity, and micro-scholarships turns pilots into measurable placements.</li>
+        <li><strong>Employer alignment:</strong> Funders can sponsor employer-partnership tracks and apprenticeships tied to local demand.</li>
+        <li><strong>Trackable ROI:</strong> Pathway completions, job placements, and wage uplift are easy to monitor with consistent metrics.</li>
+      </ul>
+      <p class="muted-small">Ideas for funders: sponsor device lending, hotspot programs, stipends for guaranteed-interview cohorts, or Six Sigma training for placement support teams.</p>
+      <div style="margin-top:10px;">
+        <button onclick="document.getElementById('submit').scrollIntoView({behavior:'smooth'})">Partner / Sponsor</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Programs table and filter -->
+  <section class="card" id="resources" aria-labelledby="resources-title" style="margin-top:20px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h2 id="resources-title">Programs & Quick Variables</h2>
+        <p class="muted-small">Click a program name to preview details. Use the filter to show free options first.</p>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button id="freeFirstBtn" onclick="filterFreeFirst()">Free Options First</button>
+        <button id="memphisFirstBtn" onclick="filterMemphisFirst()">Memphis Options First</button>
+        <button class="secondary" onclick="resetFilter()">Reset</button>
+      </div>
+    </div>
+
+    <div class="table-wrap" id="table" tabindex="0" aria-live="polite">
+      <table role="table" aria-label="Table of programs and variables">
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Cost</th>
+            <th>Format</th>
+            <th>Duration</th>
+            <th>Prereqs</th>
+            <th>Credential / Jobs</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="programTbody">
+          <!-- The rows below are example data; replace links and text with current details -->
+          <tr data-free="true" data-location="Memphis">
+            <td><strong>CodeCrew — Code School</strong></td>
+            <td><span class="badge free">Free (selected)</span></td>
+            <td>In-person cohort</td>
+            <td>~6 months (part-time)</td>
+            <td>HS diploma; nomination</td>
+            <td>Portfolio + employer connections</td>
+            <td>Memphis</td>
+          </tr>
+          <tr data-free="false" data-location="Memphis">
+            <td><strong>Tech901</strong></td>
+            <td><span class="badge paid">$ (subsidized)</span></td>
+            <td>In-person / Hybrid</td>
+            <td>4–14 weeks (varies)</td>
+            <td>None for intro</td>
+            <td>Certificate; local partnerships</td>
+            <td>Memphis</td>
+          </tr>
+          <tr data-free="true" data-location="Memphis">
+            <td><strong>Memphis Public Libraries — Tech Classes</strong></td>
+            <td><span class="badge free">Free</span></td>
+            <td>In-person / Virtual</td>
+            <td>Single sessions → multi-week</td>
+            <td>None</td>
+            <td>Skill building</td>
+            <td>Multiple branches</td>
+          </tr>
+          <tr data-free="false" data-location="Online">
+            <td><strong>University of Memphis — PACE / ed2go</strong></td>
+            <td><span class="badge paid">$$</span></td>
+            <td>Remote / Instructor-moderated</td>
+            <td>6 weeks typical</td>
+            <td>Varies by course</td>
+            <td>Completion certificate</td>
+            <td>Online</td>
+          </tr>
+          <tr data-free="false" data-location="Memphis">
+            <td><strong>Southwest TN Community College</strong></td>
+            <td><span class="badge paid">$$</span></td>
+            <td>Credit + CE / In-person</td>
+            <td>Semester / bootcamps</td>
+            <td>College admissions for credit</td>
+            <td>College credit, certs</td>
+            <td>Memphis area campuses</td>
+          </tr>
+          <tr data-free="true" data-location="National">
+            <td><strong>LaunchCode (when available locally)</strong></td>
+            <td><span class="badge free">Free (some tracks)</span></td>
+            <td>Cohort / remote</td>
+            <td>~20 weeks (LC101 model)</td>
+            <td>None for LC101</td>
+            <td>Job placement support</td>
+            <td>National — local listings</td>
+          </tr>
+          <tr data-free="false" data-location="Online">
+            <td><strong>General Assembly</strong></td>
+            <td><span class="badge paid">$$$ (paid)</span></td>
+            <td>Remote live / bootcamp</td>
+            <td>Workshops → multi-week</td>
+            <td>Varies</td>
+            <td>Career services (paid tracks)</td>
+            <td>Online / Global</td>
+          </tr>
+          <tr data-free="true" data-location="Online">
+            <td><strong>Khan Academy</strong></td>
+            <td><span class="badge free">Free</span></td>
+            <td>Self-paced online</td>
+            <td>Self-paced</td>
+            <td>None</td>
+            <td>Practice & fundamentals</td>
+            <td>Online</td>
+          </tr>
+          <tr data-free="true" data-location="Online">
+            <td><strong>freeCodeCamp</strong></td>
+            <td><span class="badge free">Free</span></td>
+            <td>Self-paced online</td>
+            <td>Self-paced / projects</td>
+            <td>None</td>
+            <td>Certificates & portfolio</td>
+            <td>Online</td>
+          </tr>
+          <tr data-free="true" data-location="Online">
+            <td><strong>Codecademy (Free tier)</strong></td>
+            <td><span class="badge free">Free tier</span></td>
+            <td>Self-paced online</td>
+            <td>Self-paced</td>
+            <td>None</td>
+            <td>Pro paid certs</td>
+            <td>Online</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 1-Month Path builder -->
+  <section class="card" id="path" aria-labelledby="path-title" style="margin-top:20px;">
+    <h2 id="path-title">My 1-Month Learning Path (Quick Sprint)</h2>
+    <p class="muted-small">Answer 3 short questions — we’ll suggest 2 recommended one-month sprints to test your interest and build momentum.</p>
+
+    <div class="questions" role="form" aria-labelledby="path-title">
+      <label for="time">1) How many hours per week can you commit?</label>
+      <select id="time" aria-label="Hours per week">
+        <option value="5">Up to 5 hrs/week</option>
+        <option value="10">~10 hrs/week</option>
+        <option value="20">15–20 hrs/week</option>
+      </select>
+
+      <label for="goal">2) What is your main goal for the month?</label>
+      <select id="goal" aria-label="Main goal">
+        <option value="try">Try coding and see if I like it</option>
+        <option value="job">Prepare for entry-level job (IT/support)</option>
+        <option value="project">Build a small portfolio project</option>
+      </select>
+
+      <label for="experience">3) What is your current experience?</label>
+      <select id="experience" aria-label="Experience level">
+        <option value="none">No experience</option>
+        <option value="some">Some basics (HTML/CSS/office)</option>
+        <option value="confident">Comfortable with basics</option>
+      </select>
+
+      <div style="margin-top:12px;">
+        <button onclick="suggestPaths()">Suggest My 2 Paths</button>
+        <button class="secondary" onclick="resetPath()">Reset</button>
+      </div>
+    </div>
+
+    <div id="pathResult" class="result" aria-live="polite" style="display:none;">
+      <h3>Suggested 1-Month Sprints</h3>
+      <div id="suggestions"></div>
+      <hr style="border:none; height:1px; background:#eef4fb; margin:12px 0;">
+      <h4>4-Week Decision Tree (Local options)</h4>
+      <p class="muted-small">Based on your answers, here’s a practical 4-week plan that maps to Memphis options and how you might use free resources + a cohort.</p>
+      <div id="flow"></div>
+    </div>
+  </section>
+
+  <!-- Organization submission form -->
+  <section class="card" id="submit" aria-labelledby="submit-title" style="margin-top:20px;">
+    <h2 id="submit-title">Submit a Program / Resource</h2>
+    <p class="muted-small">Organizations may use this form to add or update offerings. Please match the fields used in our table so listings stay consistent.</p>
+
+    <form class="org-form" onsubmit="submitProgram(event)">
+      <label for="orgName">Program / Provider Name</label>
+      <input id="orgName" required placeholder="e.g., Tech901 — Web Path"/>
+
+      <label for="cost">Cost / Fees (short)</label>
+      <input id="cost" required placeholder="e.g., Free; $; $$; Subsidized / scholarship available"/>
+
+      <label for="format">Format</label>
+      <select id="format">
+        <option>In-person / cohort</option>
+        <option>Hybrid</option>
+        <option>Remote / self-paced</option>
+        <option>Remote / instructor-led</option>
+      </select>
+
+      <label for="duration">Typical Duration</label>
+      <input id="duration" placeholder="e.g., 6 months; 4–12 weeks"/>
+
+      <label for="prereqs">Prerequisites</label>
+      <input id="prereqs" placeholder="e.g., None; HS diploma; basic computer skills"/>
+
+      <label for="credential">Credential / Job support</label>
+      <input id="credential" placeholder="e.g., certificate; portfolio; employer connections"/>
+
+      <label for="location">Location / Contact / URL</label>
+      <input id="location" placeholder="City, branch, or website URL"/>
+
+      <label for="notes">Notes (accessibility, childcare, transport, scholarships)</label>
+      <textarea id="notes" rows="3" placeholder="e.g., childcare available; bus lines nearby"></textarea>
+
+      <div style="margin-top:10px;">
+        <button type="submit">Submit Program</button>
+        <button type="button" class="secondary" onclick="document.getElementById('orgName').value='';">Clear</button>
+      </div>
+      <p id="submitMsg" class="muted-small" style="margin-top:8px; display:none;"></p>
+    </form>
+  </section>
+
+  <!-- Resource page: additional USPs, app feature ideas, sharing & funding -->
+  <section class="card" id="more" style="margin-top:20px;">
+    <h2>More: features, sharing, and funding ideas</h2>
+
+    <h3>Remaining USPs & product features (resource page)</h3>
+    <ul class="usp">
+      <li><strong>Updated & trustworthy:</strong> a small curation team (or volunteer network) verifies links and cohort start dates monthly.</li>
+      <li><strong>Motivation & stories:</strong> local success stories and short video testimonies to boost enrollments.</li>
+      <li><strong>Transport & logistics:</strong> show bus routes, parking, and device-lending locations next to each listing.</li>
+      <li><strong>Micro-missions & progress:</strong> daily micro tasks and badges to keep learners consistent during sprints.</li>
+    </ul>
+
+    <h3>How to share with Memphis 211 & City Hackathon winners</h3>
+    <ol>
+      <li><strong>Data feed (simple CSV/JSON):</strong> export program listings as a standard CSV or JSON API that 211 can ingest. Include fields: name, cost, format, start date, contact, URL, accessibility notes.</li>
+      <li><strong>Partner with Hackathon winners:</strong> invite the 2025 City Hackathon team(s) to prototype an automated integration (webhook) or an embeddable widget that shows live openings — pilot on one library branch.</li>
+      <li><strong>Embed widgets:</strong> create a small embeddable iframe or JavaScript widget (search + filter) that 211 or library sites can drop into their pages.</li>
+      <li><strong>Data governance:</strong> set a monthly verification cadence and a contact for corrections so 211 shows accurate openings to callers.</li>
+    </ol>
+
+    <h3>Funding ideas for devices, internet, and post-trial costs</h3>
+    <ul class="usp">
+      <li><strong>Device-lending sponsorships:</strong> partner with local funders to buy laptops for a lending pool that learners borrow during cohorts.</li>
+      <li><strong>Hotspot grants:</strong> fund cellular hotspots + data plans for learners during the 1-month trial and first 3 months of a cohort.</li>
+      <li><strong>Stipends & micro-grants:</strong> small stipends to cover childcare, transportation, or living costs while learners attend intensive weeks.</li>
+      <li><strong>Employer match programs:</strong> employers subsidize Six Sigma training or soft-skills workshops tied to hireable outcomes; include apprenticeship wage supports.</li>
+      <li><strong>Foundation & city partnerships:</strong> propose a “Digital Delta Starter Kit” grant to city & local foundations for one-time startup costs (devices, LMS access, tools).</li>
+    </ul>
+
+    <p class="muted-small">Note: when you’re ready, I can add an embeddable widget code snippet or produce the CSV/JSON spec 211 prefers.</p>
+  </section>
+</main>
+
+<footer>
+  <div style="max-width:1000px; margin:0 auto;">
+    <p>&copy; <strong>Digital Delta</strong> — Memphis coding resources. Designed to help adult learners, funders, and employers connect and grow. Built for accessibility and clear choices.</p>
+  </div>
+</footer>
+
+<script>
+  /* ========== CLIENT-SIDE JAVASCRIPT ========== */
+  
+  // Cache table body element for filtering
+  const tbody = document.getElementById('programTbody');
+  
+  // Filter and display free programs first
+  function filterFreeFirst(){
+    // Move free rows to top
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const free = rows.filter(r => r.dataset.free === 'true');
+    const paid = rows.filter(r => r.dataset.free === 'false');
+    tbody.innerHTML = '';
+    free.concat(paid).forEach(r => tbody.appendChild(r));
+    document.getElementById('freeFirstBtn').textContent = 'Free options shown first ✓';
+    document.getElementById('memphisFirstBtn').textContent = 'Memphis Options First';
+  }
+  
+  // Filter and display Memphis programs first
+  function filterMemphisFirst(){
+    // Move Memphis rows to top
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    const memphis = rows.filter(r => r.dataset.location === 'Memphis');
+    const other = rows.filter(r => r.dataset.location !== 'Memphis');
+    tbody.innerHTML = '';
+    memphis.concat(other).forEach(r => tbody.appendChild(r));
+    document.getElementById('memphisFirstBtn').textContent = 'Memphis options shown first ✓';
+    document.getElementById('freeFirstBtn').textContent = 'Show Free Options First';
+  }
+  
+  // Reset filter to original order
+  function resetFilter(){
+    location.reload(); // Simplest reset method
+  }
+
+  /* ========== PATH SUGGESTION LOGIC ========== */
+  
+  // Preset learning paths with time/goal/experience requirements
+  const presets = [
+    { id:'Intro-DLW', title:'Discover & Learn: 1-month Intro', time: '5', goal:'try', exp:'none',
+      bullets:[
+        'Week 1: 3×30-min intro lessons (Khan Academy / freeCodeCamp basics).',
+        'Week 2: Guided HTML/CSS practice — build a simple page.',
+        'Week 3: Small project — a single-page portfolio mockup.',
+        'Week 4: Local meetup or library workshop; next-steps checklist.'
+      ],
+      local:['Memphis Public Libraries (workshops)','Khan Academy','freeCodeCamp']
+    },
+    { id:'IT-Prep', title:'IT Support Sprint: prepare for entry-level IT', time:'10', goal:'job', exp:'some',
+      bullets:[
+        'Week 1: Basic networking & troubleshooting micro-lessons.',
+        'Week 2: Hands-on labs (library computer lab; Tech901 intro session).',
+        'Week 3: Mock interviews & resume clinic; vendor cert prep overview.',
+        'Week 4: Apply to local IT apprenticeships / CodeCrew employer partners.'
+      ],
+      local:['Tech901','CodeCrew','Memphis Public Libraries']
+    },
+    { id:'Web-Project', title:'Portfolio Push: build a project', time:'20', goal:'project', exp:'confident',
+      bullets:[
+        'Week 1: Wireframe & set up project (HTML/CSS).',
+        'Week 2: Add interactivity (JavaScript basics).',
+        'Week 3: Polish UI; accessibility checks; deploy (GitHub Pages).',
+        'Week 4: Present at a local meetup; add project to portfolio.'
+      ],
+      local:['CodeCrew','freeCodeCamp','Meetup groups']
+    },
+    { id:'Quick-Explore', title:'Quick Explore: daily micro-missions', time:'5', goal:'try', exp:'some',
+      bullets:[
+        'Daily 15–30 min micro tasks (learnings & small wins).',
+        'Week 2: Join a study group at the library.',
+        'Week 3: Pick a tiny project (calculator, form).',
+        'Week 4: Decide next path: project or job prep.'
+      ],
+      local:['Memphis Public Libraries','Meetup','Khan Academy']
+    }
+  ];
+
+  // Generate personalized path suggestions based on user input
+  function suggestPaths(){
+    // Get user selections
+    const time = document.getElementById('time').value;
+    const goal = document.getElementById('goal').value;
+    const exp = document.getElementById('experience').value;
+    
+    // Score each preset based on user's answers
+    const scores = presets.map(p => {
+      let s = 0;
+      if (p.time === time) s+=2;
+      if (p.goal === goal) s+=3;
+      if (p.exp === exp) s+=1;
+      return {id:p.id,score:s};
+    });
+    
+    // Sort by score and get top 2 matches
+    scores.sort((a,b)=>b.score-a.score);
+    const top2 = scores.slice(0,2).map(x=>presets.find(p=>p.id===x.id));
+    
+    // Display suggestions
+    const suggestionsDiv = document.getElementById('suggestions');
+    suggestionsDiv.innerHTML = '';
+    top2.forEach(p => {
+      const el = document.createElement('div');
+      el.innerHTML = '<h4 style="margin-bottom:6px;">' + p.title + '</h4><ul style="margin-top:0;">' + p.bullets.map(b=>'<li>'+b+'</li>').join('') + '</ul>';
+      el.style.marginBottom='10px';
+      suggestionsDiv.appendChild(el);
+    });
+
+    // Generate 4-week decision tree visualization
+    const flow = document.getElementById('flow');
+    flow.innerHTML = '';
+    const ul = document.createElement('ol');
+    ul.innerHTML = '<li>Week 1 — Commit short daily practice and pick one free local workshop (library or Meetup).</li>' +
+                   '<li>Week 2 — Do hands-on labs or guided tutorials; visit a CodeCrew/Tech901 info session.</li>' +
+                   '<li>Week 3 — Build or practice interview skills; meet a mentor/peer.</li>' +
+                   '<li>Week 4 — Demo what you made, update a resume, and apply to one job or next cohort.</li>';
+    flow.appendChild(ul);
+
+    // Add visual SVG timeline
+    const svg = `<svg width="100%" height="140" viewBox="0 0 800 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs><style>.s{fill:#ffffff;stroke:#dfe7ee;stroke-width:1.5;font-family:Arial;font-size:12px;}</style></defs>
+      <rect x="20" y="20" rx="10" width="170" height="45" fill="#e6f7ff" class="s"/><text x="105" y="50" text-anchor="middle" fill="#05324a">Week 1: Explore</text>
+      <rect x="215" y="20" rx="10" width="170" height="45" fill="#fef6da" class="s"/><text x="300" y="50" text-anchor="middle" fill="#6b4a00">Week 2: Hands-on</text>
+      <rect x="410" y="20" rx="10" width="170" height="45" fill="#e6f7ff" class="s"/><text x="495" y="50" text-anchor="middle" fill="#05324a">Week 3: Polish</text>
+      <rect x="605" y="20" rx="10" width="170" height="45" fill="#dff7e6" class="s"/><text x="690" y="50" text-anchor="middle" fill="#0a6b63">Week 4: Demo / Apply</text>
+      <path d="M190 42 L215 42" stroke="#d0dff0" stroke-width="2" fill="none" marker-end="url(#m)"/>
+      <path d="M385 42 L410 42" stroke="#d0dff0" stroke-width="2" fill="none"/>
+      <path d="M580 42 L605 42" stroke="#d0dff0" stroke-width="2" fill="none"/>
+    </svg>`;
+    flow.insertAdjacentHTML('beforeend', svg);
+
+    // Show results and set focus for accessibility
+    document.getElementById('pathResult').style.display='block';
+    document.getElementById('pathResult').focus();
+  }
+
+  // Reset path builder form
+  function resetPath(){
+    document.getElementById('time').selectedIndex = 0;
+    document.getElementById('goal').selectedIndex = 0;
+    document.getElementById('experience').selectedIndex = 0;
+    document.getElementById('pathResult').style.display='none';
+  }
+
+  /* ========== PROGRAM SUBMISSION HANDLER ========== */
+  
+  // Handle program submission form (demo mode - adds directly to table)
+  function submitProgram(e){
+    e.preventDefault();
+    
+    // Extract form values
+    const name = document.getElementById('orgName').value.trim();
+    if(!name) return; // Require name at minimum
+    const cost = document.getElementById('cost').value.trim();
+    const format = document.getElementById('format').value;
+    const duration = document.getElementById('duration').value.trim();
+    const prereqs = document.getElementById('prereqs').value.trim() || 'None';
+    const credential = document.getElementById('credential').value.trim() || '';
+    const location = document.getElementById('location').value.trim();
+    const notes = document.getElementById('notes').value.trim();
+
+    // Create new table row
+    const tr = document.createElement('tr');
+    const isFree = /free|no cost|tuition-free/i.test(cost); // Detect free programs
+    tr.dataset.free = isFree ? 'true' : 'false';
+    tr.innerHTML = `<td><strong>${escapeHtml(name)}</strong>${notes ? '<div style="font-size:12px;color:#6b7280;margin-top:6px;">' + escapeHtml(notes) + '</div>' : ''}</td>
+      <td>${escapeHtml(cost)}</td>
+      <td>${escapeHtml(format)}</td>
+      <td>${escapeHtml(duration)}</td>
+      <td>${escapeHtml(prereqs)}</td>
+      <td>${escapeHtml(credential)}</td>
+      <td>${escapeHtml(location)}</td>`;
+    tbody.appendChild(tr);
+    
+    // Show success message
+    const msg = document.getElementById('submitMsg');
+    msg.style.display='block';
+    msg.textContent='Thanks — your submission was added to the preview table. Site admin will verify and publish.';
+    
+    // Reset form and hide message after 6 seconds
+    e.target.reset();
+    setTimeout(()=>msg.style.display='none', 6000);
+  }
+
+  // Sanitize HTML to prevent XSS attacks
+  function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+</script>
+</body>
 </html>
